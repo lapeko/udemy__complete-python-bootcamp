@@ -1,10 +1,16 @@
+#  def singleNumber(nums):
+#    nums_count = {}
+#    for n in nums:
+#      nums_count[n] = nums_count.get(n, 0) + 1
+#    for key, count in nums_count.items():
+#      if count == 1:
+#        return key
+
 def singleNumber(nums):
-  nums_count = {}
-  for n in nums:
-    nums_count[n] = nums_count.get(n, 0) + 1
-  for key, count in nums_count.items():
-    if count == 1:
-      return key
+  res = 0
+  for num in nums:
+    res ^= num
+  return res
 
 tests = [
   {"array": [2, 1, 2, 3, 3], "expected": 1},
