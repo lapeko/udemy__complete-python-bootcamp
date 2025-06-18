@@ -6,11 +6,11 @@
 #      if count == 1:
 #        return key
 
-def singleNumber(nums):
-  res = 0
+def single_number(nums):
+  result = 0
   for num in nums:
-    res ^= num
-  return res
+    result ^= num
+  return result
 
 tests = [
   {"array": [2, 1, 2, 3, 3], "expected": 1},
@@ -19,7 +19,7 @@ tests = [
 ]
 
 for t in tests:
-  res = singleNumber(t["array"])
+  res = single_number(t["array"])
   if res != t["expected"]:
     print(f"Err: Expected {t["expected"]}, received: {res}")
   else:
