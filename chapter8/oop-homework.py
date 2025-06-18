@@ -23,9 +23,8 @@ class Dog(Animal):
 
 
 class Shelter:
-    animals = []
-
     def __init__(self, init_animals = None):
+        self.animals = []
         if init_animals is not None:
             self.animals += init_animals
 
@@ -42,4 +41,3 @@ shelter = Shelter()
 shelter.add_animal(Dog("Spiky", 5))
 shelter.add_animal(Animal("Meowt", 4))
 print(shelter)
-
